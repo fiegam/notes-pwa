@@ -1,5 +1,5 @@
 on: push
-name: 🚀 Deploy website on push
+name: 🚀 Build&Deploy
 jobs:
   build:
     name: 🎉 Build
@@ -18,13 +18,8 @@ jobs:
         npm install
         npm run build:prod
 
-  deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    needs: build
-    steps:
-    - name: 📂 Sync files
+    - name: 📂 Deploy
+      if: github.ref == 'refs/heads/main'
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: ftpupload.net
