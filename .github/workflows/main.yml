@@ -19,7 +19,7 @@ jobs:
         npm run build:prod
 
   deploy:
-    name: 🎉 Build
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: build
