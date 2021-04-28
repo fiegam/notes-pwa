@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fiegam-notes-pwa": {
+      "hosting": {
+        "notes-pwa": [
+          "fiegam-notes-pwa"
+        ]
+      }
+    }
+  }
+}
